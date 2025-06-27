@@ -1,0 +1,56 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Freestyle2PostCrawling</Name>
+    <RootNamespace>Freestyle2PostCrawling</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7c81c7af-5a01-4de0-af16-fb7a91be9de6</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="crawlers\ruliweb.js" />
+    <Content Include="crawlers\inven.js" />
+    <Content Include="crawlers\dcinside.js" />
+    <Content Include="crawlers\official.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="data\event_category.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="google_sheets\auth.json" />
+    <Content Include="google_sheets\sheets_api.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="main.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="utils\match_event.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="crawlers\" />
+    <Folder Include="data\" />
+    <Folder Include="google_sheets\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+</Project>

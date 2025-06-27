@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "freestyle2-post-crawling",
+  "version": "0.0.0",
+  "description": "Freestyle2PostCrawling",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {
+  }
+}
