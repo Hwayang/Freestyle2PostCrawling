@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+freestyle2-crawler-af98f0ad28c8.json
+.env
